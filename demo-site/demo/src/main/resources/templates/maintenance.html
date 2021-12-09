@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+
+<head th:replace="fragments/head">
+    <!-- Fragment "head" inserted here - styles, meta, and JS imports -->
+</head>
+
+<body class="govuk-template__body">
+    <div th:replace="fragments/header">
+        <!-- Header content, such as cookie consent here -->
+    </div>
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-l">Sorry, the service is unavailable</h1>
+                    <p class="govuk-body">
+                        You will be able to use the service later.
+                    </p>
+
+                    <h3 id="guidance" class="govuk-heading-s">Guidance for travelling to the UK</h3><a
+                        name="guidance" />
+                    <p class="govuk-body">
+                        The rules are different depending on which nation you are travelling to.
+                    </p>
+                    <p class="govuk-body">
+                        <a href="https://www.gov.scot/publications/coronavirus-covid-19-international-travel-quarantine/"
+                            target="_blank">travelling to Scotland</a><br />
+                        <a href="https://gov.wales/rules-international-travel-and-wales-coronavirus"
+                            target="_blank">travelling to
+                            Wales</a><br />
+                        <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-travel-advice"
+                            target="_blank">travelling to Northern Ireland</a>
+                    </p>
+
+                    <p class="govuk-body">
+                        If you will be travelling on to Ireland, Northern Ireland, Scotland, Wales, the Channel Islands,
+                        or the Isle
+                        of Man in the ten days after you arrive in the UK, you must follow the rules for testing and
+                        quarantine in
+                        those places.
+                    </p>
+
+
+                    <h3 id="list-of-test-providers" class="govuk-heading-s">Lateral Flow Test providers</h3><a
+                        name="list-of-test-providers" />
+
+                    <p class="govuk-body">While we work to bring the site fully online, please find below a list of
+                        providers that currently offer Lateral Flow Tests</p>
+
+                    <div class="govuk-grid-row govuk-!-margin-top-4">
+                        <div class="govuk-grid-column-full col-full" id="lowest-table-div">
+                            <div class="table-wrapper">
+                                <table class="govuk-table" id="providerDataTable">
+                                    <thead class="govuk-table__head">
+                                        <tr class="govuk-table__row">
+                                            <th class="govuk-table__header app-custom-class govuk-body-s" id="provider"
+                                                aria-sort="none"><button type="button" data-index="0">
+                                                    Provider name
+                                                </button>
+                                                <p class="govuk-body-s">(opens in new tab)</p>
+                                            </th>
+                                            <th class="govuk-table__header price-cell-width govuk-body-s" id="price"
+                                                aria-sort="ascending"><button type="button" data-index="1">
+                                                    Prices from
+                                                </button></th>
+                                            <th class="govuk-table__header app-custom-class govuk-body-s" id="methods">
+                                                Testing method
+                                            </th>
+
+                                            <th class="govuk-table__header app-custom-class govuk-body-s"
+                                                id="contactDetails">
+                                                Contact details
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="govuk-table__body">
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.peplobio.co.uk"
+                                                    target="_blank">PeploBio</a><span>, using
+                                                    <span>PeploBio</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£18</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:info@peplobio.co.uk">info@peplobio.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.testingforall.org/travel/" target="_blank">Testing
+                                                    For All</a><span>, using
+                                                    <span>Nonacus</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£19</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 2033011100"
+                                                    aria-label="+44 (0) 2033011100">+44 (0) 2033011100</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:travel@testingforall.org">travel@testingforall.org</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.expresstest.co.uk/book-a-test/"
+                                                    target="_blank">ExpressTest by Cignpost Diagnostics</a><span>, using
+                                                    <span>YourGene Health UK Ltd and Nonacus Ltd</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£19.99</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, South East England, South West England, Greater
+                                                London</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home, Self swab on site, Provider supervised on
+                                                site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:info@expresstest.co.uk">info@expresstest.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.expresstest.co.uk/book-a-test/"
+                                                    target="_blank">Cignpost Diagnostics</a><span>, using
+                                                    <span>YourGene Health UK Ltd and Nonacus Ltd</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£19.99</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, South East England, South West England, Greater
+                                                London</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home, Self swab on site, Provider supervised on
+                                                site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:info@expresstest.co.uk">info@expresstest.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://fly.randox.com/" target="_blank">Randox Health Airport
+                                                    Testing</a><span>, using
+                                                    <span>Randox Laboratories</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£20</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                Northern Ireland, North West England, North East England, Yorkshire and
+                                                the Humber, East Midlands, West Midlands, East of England, South East
+                                                England, South West England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home, Provider supervised on site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:covidcustomersupport@randox.com">covidcustomersupport@randox.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://ldn.randox.com" target="_blank">Randox Health London
+                                                    Limited</a><span>, using
+                                                    <span>Randox Laboratories Ltd</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£20</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                Northern Ireland, East Midlands, West Midlands, East of England, South
+                                                East England, South West England, Greater London</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home, Provider supervised on site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 2894422413"
+                                                    aria-label="+44 (0) 2894422413">+44 (0) 2894422413</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:fly@randox.com">fly@randox.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="http://lpl.randox.com" target="_blank">Randox Health
+                                                    LiverpoolONE</a><span>, using
+                                                    <span>Randox Laboratories</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£20</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home, Provider supervised on site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 8002545201"
+                                                    aria-label="+44 (0) 8002545201">+44 (0) 8002545201</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:covidcustomersupport@randox.com">covidcustomersupport@randox.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://booking@randox.com" target="_blank">Randox
+                                                    Laboratories</a><span>, using
+                                                    <span>Randox Laboratories</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£20</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                Northern Ireland</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home, Provider supervised on site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 2894343005"
+                                                    aria-label="+44 (0) 2894343005">+44 (0) 2894343005</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:travelcentre@randox.com">travelcentre@randox.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.boots.com/day-2-day-8-covid-19-testing"
+                                                    target="_blank">Boots UK</a><span>, using
+                                                    <span>Source BioScience / MyHealthChecked</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£21</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:boots.customercare_team@boots.co.uk">boots.customercare_team@boots.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.projectscreen.co.uk/" target="_blank">Project
+                                                    Screen by Prenetics</a><span>, using
+                                                    <span>Prenetics and Anglia DNA</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£22</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home, Self
+                                                swab on site, Provider supervised on site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 3003032860"
+                                                    aria-label="+44 (0) 3003032860">+44 (0) 3003032860</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:care@projectscreen.co.uk">care@projectscreen.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.chronomics.com"
+                                                    target="_blank">Chronomics</a><span>, using
+                                                    <span>Nonacus, Oncologica, Dante Labs, Acculabs, and
+                                                        Igenomix</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£23.50</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 2045197400"
+                                                    aria-label="+44 (0) 2045197400">+44 (0) 2045197400</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:support@chronomics.com">support@chronomics.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://covidsmart.co.uk/shop/" target="_blank">Covid Smart
+                                                    Limited</a><span>, using
+                                                    <span>Salient Bio</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£24</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home, Self swab on site, Provider supervised on
+                                                site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 8007022145"
+                                                    aria-label="+44 (0) 8007022145">+44 (0) 8007022145</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:hello@covidsmart.co.uk">hello@covidsmart.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.affinityhealth.uk" target="_blank">Affinity
+                                                    Health</a><span>, using
+                                                    <span>Oncologica, Source Bioscience, Immensa Health Clinic (Dante
+                                                        Labs)</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£25</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:support@affinityhealth.uk">support@affinityhealth.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://covid19.oncologica.com/coronafocus-day2-day8/"
+                                                    target="_blank">Coronafocus by Oncologica UK Ltd (t/a Oncologica UK
+                                                    Ltd)</a><span>, using
+                                                    <span>None - all done in house</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£25</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                Northern Ireland, North West England, North East England, Yorkshire and
+                                                the Humber, East Midlands, West Midlands, East of England, South East
+                                                England, South West England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home, Self
+                                                swab on site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:test@covidprotected.co.uk">test@covidprotected.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://collinsonselftest.com/products/green-bundle"
+                                                    target="_blank">Collinson</a><span>, using
+                                                    <span>AlphaBioLabs</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£28.75</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home, Provider supervised on site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 1444444140"
+                                                    aria-label="+44 (0) 1444444140">+44 (0) 1444444140</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:Consumerhelp@collinsongroup.com">Consumerhelp@collinsongroup.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.medicspot.co.uk/covid-test/day-2-and-8"
+                                                    target="_blank">Medicspot</a><span>, using
+                                                    <span>Source Bioscience, Oncologica</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£29</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                Northern Ireland, North West England, North East England, Yorkshire and
+                                                the Humber, East Midlands, West Midlands, East of England, South East
+                                                England, South West England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:tests@medicspot.co.uk">tests@medicspot.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.dam-health.com/" target="_blank">DAM Health
+                                                    Ltd</a><span>, using
+                                                    <span>DAM Health/Dam group UK Ltd</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£29</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home,
+                                                Provider supervised on site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 3301742200"
+                                                    aria-label="+44 (0) 3301742200">+44 (0) 3301742200</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto: enquiries@dam-health.com">
+                                                    enquiries@dam-health.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.c19testing.co.uk/day2day8" target="_blank">C19
+                                                    Testing</a><span>, using
+                                                    <span>BioGrad, The Doctors Laboratory</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£29</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 2039209012"
+                                                    aria-label="+44 (0) 2039209012">+44 (0) 2039209012</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:support@c19testing.co.uk">support@c19testing.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.alphabiolabs.co.uk/public-testing-services/covid-19-testing-for-international-travel"
+                                                    target="_blank">AlphaBiolabs</a><span>, using
+                                                    <span>AlphaBiolabs</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£29.50</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:covid@alphabiolabs.com">covid@alphabiolabs.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.better2know.co.uk/shop/products/home-testing-kits/covid-19-testing-on-day-2-and-day-8-for-international-arrivals"
+                                                    target="_blank">Better2Know</a><span>, using
+                                                    <span>Nationwide, 2030, Source Bioscience, The Doctors Laboratory
+                                                        (TDL)</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£29.95</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                Northern Ireland, North West England, North East England, Yorkshire and
+                                                the Humber, East Midlands, West Midlands, East of England, South East
+                                                England, South West England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:"></a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:info@better2know.com">info@better2know.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://coviduk.sourcebioscience.com/" target="_blank">Source
+                                                    BioScience</a>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£30</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 1159739012"
+                                                    aria-label="+44 (0) 1159739012">+44 (0) 1159739012</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:covid@sourcebioscience.com">covid@sourcebioscience.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://covidtests.everythinggeneticltd.co.uk/pre.php"
+                                                    target="_blank">Everything Genetic Limited</a><span>, using
+                                                    <span>Nonacus</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£30</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 1270623179"
+                                                    aria-label="+44 (0) 1270623179">+44 (0) 1270623179</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:covidtestbookings@everythinggeneticltd.co.uk">covidtestbookings@everythinggeneticltd.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.epistem.co.uk/covid/covid-intro.php"
+                                                    target="_blank">Epistem</a><span>, using
+                                                    <span>Epistem</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£35</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 1615412301"
+                                                    aria-label="+44 (0) 1615412301">+44 (0) 1615412301</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:covid19@epistem.co.uk">covid19@epistem.co.uk</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="govuk-body-s govuk-table__cell" id="provider">
+                                                <a class="govuk-link" aria-label="(opens in new tab)"
+                                                    href="https://www.samedayclinic.co.uk/"
+                                                    target="_blank">Pharmesthetics Ltd (t/a
+                                                    http://www.samedayclinic.co.uk)</a><span>, using
+                                                    <span>Medical Diagnosis Ltd, Oncologica Ltd</span></span>
+                                            </td>
+                                            <td class="govuk-body-s govuk-table__cell govuk-table__cell--numeric currency-bold"
+                                                id="price">£39</td>
+                                            <td class="govuk-body-s govuk-table__cell region-section hide" id="region">
+                                                North West England, North East England, Yorkshire and the Humber, East
+                                                Midlands, West Midlands, East of England, South East England, South West
+                                                England, Greater London, Nationwide (England)</td>
+                                            <td class="govuk-body-s govuk-table__cell" id="kit">Self swab at home, Self
+                                                swab on site, Provider supervised on site</td>
+
+                                            <td class="govuk-body-s govuk-table__cell">
+                                                <a class="govuk-link display-block" href="tel:+44 (0) 2080504353"
+                                                    aria-label="+44 (0) 2080504353">+44 (0) 2080504353</a>
+                                                <a class="govuk-link" aria-label="(opens in an email client)"
+                                                    href="mailto:info@pharmesthetics.com ">info@pharmesthetics.com </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div aria-live="polite" role="status" aria-atomic="true" class="sortable-table-status">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer th:replace="fragments/footer">
+        <!-- Footer content -->
+    </footer>
+    <div th:replace="fragments/scripts">
+        <!-- Lazy loaded JavaScripts -->
+    </div>
+</body>
+
+</html>

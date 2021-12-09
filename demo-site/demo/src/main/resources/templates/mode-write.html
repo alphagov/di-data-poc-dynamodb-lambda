@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+
+<head th:replace="fragments/head">
+    <!-- Fragment "head" inserted here - styles, meta, and JS imports -->
+</head>
+
+<body class="govuk-template__body">
+<div th:replace="fragments/header">
+    <!-- Header content, such as cookie consent here -->
+</div>
+<main id="main-content" class="govuk-width-container govuk-!-margin-top-9">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l" th:text="${'Demo site - Write to ' + userName}"></h1>
+
+            <form action="#" th:action="@{/write}" method="post">
+                <input type="hidden" name="userId" value="${userId}">
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="firstname">
+                        First name
+                    </label>
+                    <div id="firstname-hint" class="govuk-hint">
+                        For example, John
+                    </div>
+                    <input class="govuk-input govuk-input--width-10" id="firstname" name="firstname"
+                           type="text" aria-describedby="firstname-hint">
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="lastname">
+                        Last name
+                    </label>
+                    <div id="lastname-hint" class="govuk-hint">
+                        For example, Doe
+                    </div>
+                    <input class="govuk-input govuk-input--width-10" id="lastname" name="lastname"
+                           type="text" aria-describedby="lastname-hint">
+                </div>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            Date of birth
+                        </legend>
+                        <div id="dob-hint" class="govuk-hint">
+                            For example, 31 3 1980
+                        </div>
+                        <div class="govuk-date-input" id="dob">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="dob-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                           id="dob-day" name="dob-day" type="text" pattern="[0-9]*"
+                                           inputmode="numeric"></div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="dob-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                           id="dob-month" name="dob-month" type="text" pattern="[0-9]*"
+                                           inputmode="numeric"></div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="dob-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                           id="dob-year" name="dob-year" type="text" pattern="[0-9]*"
+                                           inputmode="numeric"></div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="passport-number">
+                        Passport number
+                    </label>
+                    <div id="passport-number-hint" class="govuk-hint">
+                        For example, 502135326
+                    </div>
+                    <input class="govuk-input govuk-input--width-10" id="passport-number" name="passport-number"
+                           type="text" aria-describedby="passport-number-hint">
+                </div>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            Expiry date
+                        </legend>
+                        <div id="expiry-hint" class="govuk-hint">
+                            For example, 31 3 1980
+                        </div>
+                        <div class="govuk-date-input" id="expiry">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="expiry-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                           id="expiry-day" name="expiry-day" type="text" pattern="[0-9]*"
+                                           inputmode="numeric"></div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                           id="expiry-month" name="expiry-month" type="text" pattern="[0-9]*"
+                                           inputmode="numeric"></div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                           id="expiry-year" name="expiry-year" type="text" pattern="[0-9]*"
+                                           inputmode="numeric"></div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <button aria-label="Continue" class="govuk-button" data-module="govuk-button"
+                        onclick="return submitForm()"
+                        value="result">
+                    Continue
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+<footer th:replace="fragments/footer">
+    <!-- Footer content -->
+</footer>
+<div th:replace="fragments/scripts">
+    <!-- Lazy loaded JavaScripts -->
+</div>
+</body>
+
+</html>

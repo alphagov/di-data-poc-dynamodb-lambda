@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+
+<head th:replace="fragments/head">
+    <!-- Fragment "head" inserted here - styles, meta, and JS imports -->
+</head>
+
+<body class="govuk-template__body">
+    <div th:replace="fragments/header">
+        <!-- Header content, such as cookie consent here -->
+    </div>
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Page not found</h1>
+              <p class="govuk-body">
+                If you typed the web address, check it is correct.
+              </p>
+              <p class="govuk-body">
+                If you pasted the web address, check you copied the entire address.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+    <footer th:replace="fragments/footer">
+        <!-- Footer content -->
+    </footer>
+    <div th:replace="fragments/scripts">
+        <!-- Lazy loaded JavaScripts -->
+    </div>
+</body>
+
+</html>

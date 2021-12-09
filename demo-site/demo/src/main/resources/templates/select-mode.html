@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+
+<head th:replace="fragments/head">
+  <!-- Fragment "head" inserted here - styles, meta, and JS imports -->
+</head>
+
+<body class="govuk-template__body">
+  <div th:replace="fragments/header">
+    <!-- Header content, such as cookie consent here -->
+  </div>
+  <main id="main-content" class="govuk-width-container govuk-!-margin-top-9">
+    <form action="#" th:action="@{/mode}" method="post">
+      <input type="hidden" name="userId" th:value="${userId}">
+      <div id="designation-form" th:class="'govuk-form-group' + ${errorMessage != null ? 'govuk-form-group govuk-form-group--error' : ''}">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading" th:text="${'Demo site - ' + userName}"></h1>
+          </legend>
+          
+          <span th:replace="fragments/errormessage" />
+
+          <p class="govuk-body">
+            Please decide how you would like to interact with the user.
+          </p>
+          <p class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input role="checkbox" class="govuk-radios__input" id="mode-read" name="mode" value="read" type="radio" />
+            <label class="govuk-label govuk-radios__label" for="mode-read">Read</label>
+          </div>
+          <div class="govuk-radios__item">
+            <input role="checkbox" class="govuk-radios__input" id="mode-write" name="mode" value="write" type="radio" />
+            <label class="govuk-label govuk-radios__label" for="mode-write">Write</label>
+          </div>
+          </p>
+        </fieldset>
+      </div>
+
+      <button aria-label="Continue" class="govuk-button" data-module="govuk-button" onclick="return submitForm()"
+        value="result">
+        Continue
+      </button>
+    </form>
+  </main>
+  <footer th:replace="fragments/footer">
+    <!-- Footer content -->
+  </footer>
+  <div th:replace="fragments/scripts">
+    <!-- Lazy loaded JavaScripts -->
+  </div>
+</body>
+
+</html>
